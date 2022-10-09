@@ -1,0 +1,14 @@
+{
+  "name": "idrabot",
+  "version": "2.0.0",
+  "description": "Idra Arts bot used for Orders.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "IdraDev",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^13.7.0"
+  }
+}
