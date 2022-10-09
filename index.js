@@ -1,6 +1,7 @@
 const fs = require('fs');
 const { Client, Collection, Intents, Interaction } = require('discord.js');
 const wait = require('util').promisify(setTimeout);
+const keepOnline = require(`./server`);
 
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 client.commands = new(Collection);
@@ -75,4 +76,5 @@ client.on('messageCreate', async (message) => {
     }   
 })
 
-client.login("OTgyMTg4MDcxNDgxMTMxMDI4.GoXnzX.hvx1OsqXyhnTsf6UOYSvIt2YF8j34zYWyral7w")
+client.login(process.env['token'])
+keepOnline();
